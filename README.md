@@ -30,31 +30,29 @@ THEN I am prompted to select an employee to update and their new role and this i
 
 # Challenge 10
 ![GIF](dist/recording.gif)
-
+![Video](dist/recording.mp4)
 
 ## Purpose
 Deploy a note taking app to help business owners organize and track tasks.
 
 ## Built With
-* HTML
-* CSS
 * JavaScript
 * Node.js
-* Express.js
-* Heroku
+* Inquirer
+* MySql2
 
 ## Website
-https://challenge-09.herokuapp.com/
+https://rosemariehalim.github.io/10-challenge/
 
 ---
 
 ## Process
 
 * planned out code
-* imported starter code
-* used module reference code
-* installed express
+* installed inquirer, mysql2, and console.table packages
 * created server.js file
-* created routes and API routes
-* tried making delete request
+* created db folder with db, schema, and seeds sql files
+* used module reference code
+* cleaned up and tested SQL code
+* worked on server.js file and inquirer code
 * tested and fixed code
