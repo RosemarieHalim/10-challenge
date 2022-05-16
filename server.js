@@ -185,7 +185,6 @@ const addEmployee = async () => {
   };
 }
 
-// Selection to add a new department.
 const addDepartment = async () => {
   try {
     console.log('Department Add');
@@ -211,7 +210,6 @@ const addDepartment = async () => {
   };
 }
 
-// Selection to add a new role.
 const addRole = async () => {
   try {
     console.log('Role Add');
@@ -263,7 +261,6 @@ const addRole = async () => {
   };
 }
 
-// Selection to update a roll for a specific employee.
 const updateEmployee = async () => {
   try {
     console.log('Employee Update');
