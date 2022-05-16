@@ -3,15 +3,24 @@ const inquirer = require('inquirer');
 const consoleTable = require('console.table');
 const db = require('./db/connection');
 
-const PORT = process.env.PORT || 3001;
-const app = express();
+const connection = mysql.createConnection({
+  host: 'localhost',
+  port: 3306,
+  user: 'root',
+  password: process.env.DB_PASSWORD,
+  database: 'employee_DB',
+});
 
-// Start server after DB connection
-db.connect(err => {
+connection.connect((err) => {
   if (err) throw err;
-  console.log('Database connected.');
-  app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+  console.log(`connected as id ${connection.threadId}\n`);
+  figlet('Employee tracker', function(err, data) {
+    if (err) {
+      console.log('ascii art not loaded');
+    } else {
+      console.log(data);
+    }  
+    startPrompt();
   });
 });
 
