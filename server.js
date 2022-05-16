@@ -3,25 +3,20 @@ const inquirer = require('inquirer');
 const consoleTable = require('console.table');
 const db = require('./db/connection');
 
-const connection = mysql.createConnection({
-  host: 'localhost',
-  port: 3306,
-  user: 'root',
-  password: process.env.DB_PASSWORD,
-  database: 'employee_DB',
-});
+const connection = mysql.createConnection(
+  {
+    host: 'localhost',
+    user: 'root',
+    password: 'fEv?tXW-E3#m^Xap-c',
+    database: 'employee_tracker'
+  },
+  console.log('Connected to the employee_tracker database.')
+);
 
-connection.connect((err) => {
+
+connection.connect(err => {
   if (err) throw err;
-  console.log(`connected as id ${connection.threadId}\n`);
-  figlet('Employee tracker', function(err, data) {
-    if (err) {
-      console.log('ascii art not loaded');
-    } else {
-      console.log(data);
-    }  
-    startPrompt();
-  });
+  prompt();
 });
 
 console.table(
